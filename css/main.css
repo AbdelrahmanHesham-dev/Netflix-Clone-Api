@@ -1,0 +1,315 @@
+/* ************************************* Reset and Base Styles **************************************** */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: black;
+  color: rgb(255, 255, 255);
+}
+
+/* ************************************* Header Styles **************************************** */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 180px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+header div img {
+  width: 150px;
+}
+
+@media (max-width: 800px) {
+  header {
+    justify-content: center;
+    padding: 0 1rem;
+  }
+
+  header div a {
+    display: block;
+    text-align: center;
+  }
+}
+
+/* ************************************* Main Banner Section (.fsec) **************************************** */
+.fsec {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 80px;
+}
+
+.fsec::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.689);
+  z-index: 1;
+}
+
+.fsec .mainfsec {
+  color: white;
+  font-weight: bold;
+  z-index: 10;
+  overflow: hidden;
+  padding-left: 100px;
+}
+
+.fsec h3 {
+  font-weight: 900;
+  font-size: 50px;
+}
+
+.fsec .mainfsec p {
+  width: 500px;
+}
+
+.fsec .mainfsec .buttond button {
+  border: none;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: 1px solid #5c5a5a;
+  background-color: rgba(0, 0, 0, 0.54);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.fsec .mainfsec .buttond button:hover {
+  background-color: #f40612;
+  transform: scale(1.05);
+}
+
+/* ************************************* #fsec2 Styles **************************************** */
+#fsec2 {
+  width: 400px;
+  height: 600px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1000;
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.458);
+  margin-left: 2rem;
+}
+
+@media (min-width: 577px) and (max-width: 1000px) {
+  #fsec2 {
+    width: 300px;
+    height: 450px;
+    margin-left: 1.5rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .fsec {
+    padding: 0;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  #fsec2 {
+    width: 150px;
+    height: 250px;
+    margin: -1rem auto 0;
+    z-index: 2000;
+  }
+
+  .fsec h3 {
+    font-weight: 800;
+    font-size: 30px;
+  }
+
+  .fsec .mainfsec {
+    position: static;
+    padding: 0 50px;
+    text-align: center;
+    margin: 50px auto 0;
+  }
+
+  .fsec .mainfsec p {
+    width: 250px;
+  }
+
+  .fsec .mainfsec .buttond {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+  .fsec .mainfsec .buttond button {
+    display: none;
+  }
+}
+
+/* ************************************* Movies Sections Styles **************************************** */
+#OriginalsMovies h3,
+#Trending h3,
+#RomanceMovies h3,
+#ComedyMovie h3 {
+  font-weight: 800;
+  font-size: 30px;
+  margin: 17px 0;
+}
+
+#OriginalsMovies .movieimg,
+#Trending .movieimg,
+#RomanceMovies .movieimg,
+#ComedyMovie .movieimg {
+  width: 300px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+/* ************************************* Slider Sections Styles **************************************** */
+.sliderSec h2 {
+  color: white;
+  padding: 50px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 50px;
+}
+
+.sliderSec .sliderDiv .mySwiper #OriginalsMovies div,
+.sliderSec .sliderDiv .mySwiper #Trending div,
+.sliderSec .sliderDiv .mySwiper #RomanceMovies div,
+.sliderSec .sliderDiv .mySwiper #ComedyMovie div {
+  width: 400px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .sliderSec h2 {
+    font-size: 35px;
+    padding: 30px;
+  }
+
+  .sliderSec .sliderDiv .mySwiper #OriginalsMovies div,
+  .sliderSec .sliderDiv .mySwiper #Trending div,
+  .sliderSec .sliderDiv .mySwiper #RomanceMovies div,
+  .sliderSec .sliderDiv .mySwiper #ComedyMovie div {
+    width: 300px;
+  }
+}
+
+/* ************************************* Swiper Styles **************************************** */
+.mySwiper {
+  position: relative;
+  height: 100%;
+  background: black;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.swiper-slide img:hover {
+  transform: scale(1.05);
+}
+
+/* ************************************* Footer Styles **************************************** */
+footer {
+  padding: 70px 140px;
+}
+
+footer a {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 15px;
+}
+
+footer ul li {
+  list-style: none;
+  margin-top: 10px;
+}
+
+
+footer select {
+  outline: none;
+  background-color: rgba(20, 20, 20, 0.479);
+  color: white;
+  padding: 6px 10px 6px 30px;
+  font-size: 15px;
+  margin-left: 25px;
+  border-radius: 5px;
+}
+
+footer select:focus{
+  outline: 1px solid white;
+  background-color: #000000;
+}
+
+footer .selectmenu {
+  position: relative;
+}
+
+footer .selectmenu .fa-globe {
+  color: white;
+  position: absolute;
+  top: 9px;
+  left: 37px;
+}
+
+footer .selectmenu .Netflix {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 15px;
+  margin: 20px 0px 0px 27px;
+}
+
+@media (max-width: 576px) {
+  .hiden {
+      display: none;
+  }
+  footer {
+      padding: 70px 40px;
+      text-align: center;
+  }
+  footer .selectmenu .fa-globe {
+      color: white;
+      position: absolute;
+      top: 9px;
+      left: 90px
+  }
+}

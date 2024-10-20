@@ -1,0 +1,219 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: black;
+}
+
+/* *************************************start header******************************************************* */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:  0px 180px;
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+header img {
+    width: 150px;
+}
+
+@media (max-width: 992px) {
+    header {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    header img {
+        width: 150px;
+    }
+    
+}
+
+.sign-in {
+    min-height: 100vh;
+    background-image: url(../imegs/hero.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.sign-in::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgb(29, 28, 28) -35%, transparent);
+    background-color: rgba(0, 0, 0, 0.384);
+    z-index: 1;
+}
+
+.maindiv {
+    background-color: #0000009a;
+    width: 450px;
+    height: 600px;
+    margin: auto;
+    position: absolute;
+    top: 146px;
+    z-index: 10;
+    color: white;
+    padding: 50px 60px;
+}
+
+
+.maindiv h3 {
+    font-weight: 750;
+    margin-bottom: 25px;
+}
+
+.maindiv form input[type="email"],
+.maindiv form input[type="password"] {
+    padding: 16px 50px 16px 5px;
+    width: 100%;
+    outline: none;
+    border: 1px solid #5c5a5a;
+    border-radius: 5px;
+    margin-right: 10px;
+    background-color: #2525257e;
+    color: rgb(255, 255, 255);
+}
+.maindiv form input[type="email"]::placeholder,
+.maindiv form input[type="password"]::placeholder {
+    color: rgb(207, 206, 206);
+    text-indent: 20px;
+}
+
+.maindiv #submitBtn {
+    border: none;
+    background-color: #e50914;
+    color: white;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    font-weight: 600;
+    padding-top: 10px;
+}
+
+.maindiv #submitBtn:hover {
+    background-color: #c40c15;
+}
+
+.maindiv form div .Forgot-password {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    left: 100px;
+    top: 30px;
+}
+
+.maindiv form .Remember-Me {
+   margin-top: 50px;
+}
+
+.maindiv form .newNetflix {
+    display: flex;
+    margin-top: 20px;
+    color: rgba(255,255,255,0.7)
+}
+
+ 
+.maindiv form .newNetflix a{
+    text-decoration: none;
+    color: white;
+    margin-left: 5px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.maindiv form .lorem {
+    font-size: 12px;
+    color: rgba(255,255,255,0.7);
+    margin-top: 20px;
+}
+
+.maindiv form .lorem span {
+    color: #0071eb;
+    cursor: pointer;
+}
+
+#emailError,
+#passwordError {
+    color: rgb(235, 57, 66);
+}
+   
+/*########################################*/
+footer {
+    padding: 70px 140px;
+}
+
+footer a {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 15px;
+}
+
+footer ul li {
+    list-style: none;
+    margin-top: 10px;
+}
+
+
+footer select {
+    outline: none;
+    background-color: rgba(20, 20, 20, 0.479);
+    color: white;
+    padding: 6px 10px 6px 30px;
+    font-size: 15px;
+    margin-left: 25px;
+    border-radius: 5px;
+}
+
+footer select:focus{
+    outline: 1px solid white;
+    background-color: #000000;
+}
+
+footer .selectmenu {
+    position: relative;
+}
+
+footer .selectmenu .fa-globe {
+    color: white;
+    position: absolute;
+    top: 9px;
+    left: 37px;
+}
+
+footer .selectmenu .Netflix {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 15px;
+    margin: 20px 0px 0px 27px;
+}
+
+@media (max-width: 576px) {
+    .hiden {
+        display: none;
+    }
+    footer {
+        padding: 70px 40px;
+        text-align: center;
+    }
+    footer .selectmenu .fa-globe {
+        color: white;
+        position: absolute;
+        top: 9px;
+        left: 90px
+    }
+}
